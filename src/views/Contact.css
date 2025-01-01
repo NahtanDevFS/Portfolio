@@ -1,0 +1,14 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    background-image: url('/background2.svg');
+    background-size: cover; /* Adjust the size as needed */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* Prevent repetition */
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    color: #ffd60a;
+}
