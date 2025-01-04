@@ -1,20 +1,109 @@
-.content-container {
+.about-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-size: 60px;
-    background-image: url('/background2.svg');
-    background-size: cover; /* Adjust the size as needed */
-    background-position: center; /* Center the background */
-    background-repeat: no-repeat; /* Prevent repetition */
-    height: 100vh; /* Full viewport height */
-    width: 100%; /* Full width */
+    height: auto; /* Full viewport height */
+    width: auto; /* Full width */
     color: #ffd60a;
-    margin-top: 80px; /* Ensure content is below the navbar */
-    border-bottom: 1px #b5b5b563;
-    border-style: solid;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    height: fit-content;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.about-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: 7%;
+    height: fit-content;
+    font-size: 30px;
+    font-weight: 500;
+    width: 30%;
+
+}
+
+.about-image {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.about-description {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    height: fit-content;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.about-skills {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    font-weight: 500;
+    margin-right: 5%;
+}
+
+.about-skill-row1, .about-skill-row2, .about-skill-row3 {
+    margin-right: 5%;
+}
+
+.about-skill-row1, .about-skill-row3 {
+    margin-top: 12%;
+}
+
+@media (max-width: 1200px) {
+    .about-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about-info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 3%;
+        margin-left: 0%;
+        height: fit-content;
+        font-size: 30px;
+        font-weight: 500;
+        width: 65%;
+    
+    }
+    
+    .about-image {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+    }
+    
+    .about-description {
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+        height: fit-content;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .about-skills {
+        margin-right: 0%;
+        margin-left: 5%;
+    }
 }
