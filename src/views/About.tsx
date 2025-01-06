@@ -9,7 +9,7 @@ export default function Content() {
         <div className='about-content'>
           <div className='about-info'>
             <img src='image.jpg' alt='profile' className='about-image'/>
-            <p className='about-description'>I'm studying the Systems engineering major and by my side learning about web programming with technologies like HTML, CSS, JavaScript and PHP and frameworks like React.js, Next.js and Laravel</p>
+            <p className='about-description'>Hi, I'm Jonathan and I'm 20 years old. I am currently studying a degree in Systems Engineering and Computer Science. I like everything related to Web development, which is why apart from university I learn technologies such as HTML, CSS, JavaScript, SQL, GIT, PHP and frameworks such as REACT, NEXT.JS and LARAVEL on my own. The language that I have used the most is Java.</p>
           </div>
           <div className='about-skills'>
             <div className='about-skill-row1'>

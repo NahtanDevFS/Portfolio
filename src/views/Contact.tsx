@@ -28,7 +28,7 @@ export default function Contact() {
           return;
         }
     
-        emailjs.sendForm('service_08cre3t', 'template_u2k28r8', e.target as HTMLFormElement, '1YfN8DPIp88bXVXbm')
+        emailjs.sendForm('service_08cre3t', 'template_u2k28r8', e.target as HTMLFormElement, '-jrUAoN2w_y3C1Som')
           .then(() => {
             alert('Email sent');
             // Clear the form

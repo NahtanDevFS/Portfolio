@@ -56,3 +56,27 @@
     margin-top: 30px;
   }
 }
+
+@media (max-width: 450px) {
+  .skill-item-image {
+    width: 26px;
+    height: 26px;
+  }
+
+  .skill-item-name {
+      margin-top: 5px;
+      font-size: 13px;
+      font-weight: bold;
+  }
+
+  .skill-item-container {
+    color: var(--color-white);
+    transition: all 0.3s;
+    border: 3px #ffd60a;
+    border-style: solid;
+    padding: 10px;
+    width: 80px;
+    height: 70px;
+    margin-top: 30px;
+  }
+}

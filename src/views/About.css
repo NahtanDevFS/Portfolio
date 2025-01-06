@@ -31,7 +31,7 @@
     height: fit-content;
     font-size: 30px;
     font-weight: 500;
-    width: 30%;
+    width: 35%;
 
 }
 
@@ -63,7 +63,7 @@
 }
 
 .about-skill-row1, .about-skill-row3 {
-    margin-top: 12%;
+    margin-top: 14%;
 }
 
 @media (max-width: 1200px) {
@@ -105,5 +105,54 @@
     .about-skills {
         margin-right: 0%;
         margin-left: 5%;
+    }
+}
+
+@media (max-width: 450px) {
+    .about-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about-title {
+        font-size: 45px;
+        margin-bottom: 5%;
+    }
+
+    .about-info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 3%;
+        margin-left: 0%;
+        height: fit-content;
+        font-weight: 500;
+        width: 80%;
+    
+    }
+    
+    .about-image {
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+    }
+    
+    .about-description {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+        height: fit-content;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .about-skill-row1, .about-skill-row3 {
+        margin-top: 18%;
+    }
+
+    .about-skill-row1, .about-skill-row2, .about-skill-row3 {
+        margin-right: 8%;
     }
 }
