@@ -71,6 +71,10 @@
         width: 40px;
         height: 40px;
     }
+    #img-menu {
+        width: 40px;
+        height: 30px;
+    }
 
     .navbar-mobile img.menu-closed {
         display: none;

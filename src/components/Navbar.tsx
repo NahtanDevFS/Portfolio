@@ -25,6 +25,7 @@ export default function Navbar() {
           className={clicked ? 'menu-closed' : 'menu-open'}
           src='menu-portfolio.png'
           alt='menu'
+          id='img-menu'
           onClick={handleMenuClick}
         />
         <img
