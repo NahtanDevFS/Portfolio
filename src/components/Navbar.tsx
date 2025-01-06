@@ -23,13 +23,13 @@ export default function Navbar() {
       <div className='navbar-mobile'>
       <img
           className={clicked ? 'menu-closed' : 'menu-open'}
-          src='menu.png'
+          src='menu-portfolio.png'
           alt='menu'
           onClick={handleMenuClick}
         />
         <img
           className={clicked ? 'menu-open' : 'menu-closed'}
-          src='X.png'
+          src='X-portfolio.png'
           alt='close'
           onClick={handleMenuClick}
         />
