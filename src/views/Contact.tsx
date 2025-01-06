@@ -3,7 +3,9 @@
 import React, {useState} from 'react';
 import './Contact.css';
 import emailjs from '@emailjs/browser';
-require('dotenv').config();
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 //console.log(process.env); //to show the enviroment variables
 

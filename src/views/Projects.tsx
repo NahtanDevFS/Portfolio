@@ -1,7 +1,7 @@
 import React from 'react'
 import './Projects.css'
 import Project from '@/components/Project'
-import Project_right from '@/components/Project_right'
+//import Project_right from '@/components/Project_right'
 
 const Projects = ({ 
  }) => {
