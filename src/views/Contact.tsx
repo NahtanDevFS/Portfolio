@@ -1,10 +1,17 @@
 "use client";
 
-import React, {useState} from 'react'
-import './Contact.css'
+import React, {useState} from 'react';
+import './Contact.css';
 import emailjs from '@emailjs/browser';
+require('dotenv').config();
+
+//console.log(process.env); //to show the enviroment variables
 
 export default function Contact() {
+
+  const api_key = process.env.NEXT_PUBLIC_EMAILJS_API_KEY;
+
+  console.log(process.env);
 
     const [formData, setFormData] = useState({
         fullname: '',
@@ -28,7 +35,7 @@ export default function Contact() {
           return;
         }
     
-        emailjs.sendForm('service_08cre3t', 'template_u2k28r8', e.target as HTMLFormElement, '-jrUAoN2w_y3C1Som')
+        emailjs.sendForm('service_08cre3t', 'template_u2k28r8', e.target as HTMLFormElement, api_key)
           .then(() => {
             alert('Email sent');
             // Clear the form
@@ -81,16 +88,6 @@ export default function Contact() {
                   </p>
               </form>
           </div>
-          {/*<div className="contact-info">
-              <h4 className='contact-more-info'>More Info</h4>
-              <ul>
-                  <li><i className="fas fa-map-marker-alt"></i> Baker Street</li>
-                  <li><i className="fas fa-phone"></i> (111) 111 111 111</li>
-                  <li><i className="fas fa-envelope-open-text"></i> contact@website.com</li>
-              </ul>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
-              <p>Company.com</p>
-          </div>*/}
       </div>
     </div>
   )
