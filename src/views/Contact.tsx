@@ -90,6 +90,12 @@ export default function Contact() {
                   </p>
               </form>
           </div>
+          <div className="contact-info">
+              <h3 className='contact-info-name'>Or you can contact me at this E-mail:</h3>
+              <p>
+                <strong>jonathan04franco@gmail.com</strong>
+              </p>
+            </div>
       </div>
     </div>
   )
