@@ -1,18 +1,16 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from 'react';
-import { loadSlim } from '@tsparticles/slim';
-import Particles, { initParticlesEngine } from '@tsparticles/react';
-import './Particles_background.css';
+import React, { useEffect, useMemo, useState } from "react";
+import { loadSlim } from "@tsparticles/slim";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import "./Particles_background.css";
 
 const ParticlesBackground = () => {
   const [init, setInit] = useState(false);
 
-  // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
@@ -90,10 +88,15 @@ const ParticlesBackground = () => {
 
   return (
     <div id="particles-js" className="particles-background">
-      {init && <Particles id="tsparticles" options={options} loaded={particlesLoaded} />}
+      {init && (
+        <Particles
+          id="tsparticles"
+          options={options}
+          loaded={particlesLoaded}
+        />
+      )}
     </div>
   );
 };
 
 export default ParticlesBackground;
-
