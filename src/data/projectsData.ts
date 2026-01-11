@@ -4,7 +4,13 @@ export const projectsData = [
     name: "Management system for a car repair shop business",
     description:
       "Development of a comprehensive platform for inventory and sales management in a real commercial environment for an auto parts workshop and sales company; I designed a complex inventory system segmented by product type (units, bulk/liquids), a real-time sales dashboard, robust authentication system and route protection for different users. All of the technologies that I used are: ",
-    images: ["taller_franco_dashboard.jpg", "taller_franco_inventario.jpg"],
+    images: [
+      "taller_franco_dashboard.jpg",
+      "taller_franco_inventario.jpg",
+      "taller_franco_ventas.jpg",
+      "taller_franco_ventas_pos.jpg",
+      "taller_franco_vehiculos.jpg",
+    ],
     href_project: "https://taller-franco.vercel.app/",
     href_repo: "https://github.com/NahtanDevFS/taller_franco.git",
     technologies: [

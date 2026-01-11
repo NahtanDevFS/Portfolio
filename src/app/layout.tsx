@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inconsolata } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,7 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${inconsolata.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${inconsolata.variable}`}
+      >
+        <Toaster position="bottom-right" richColors />
         {children}
       </body>
     </html>

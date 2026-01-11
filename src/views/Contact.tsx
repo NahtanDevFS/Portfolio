@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import "./Contact.css";
+import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -27,7 +28,6 @@ export default function Contact() {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Check if all fields are filled
     if (
       !formData.fullname ||
       !formData.email ||
@@ -42,8 +42,7 @@ export default function Contact() {
     emailjs
       .sendForm(serviceId, templateId, e.target as HTMLFormElement, api_key)
       .then(() => {
-        alert("Email sent");
-        // Clear the form
+        toast.success("Email sent");
         setFormData({
           fullname: "",
           email: "",
@@ -54,7 +53,7 @@ export default function Contact() {
       })
       .catch((error) => {
         console.error("Error sending email:", error);
-        alert("Failed to send email. Please try again later.");
+        toast.error("Failed to send email. Please try again later.");
       });
   };
 
@@ -108,7 +107,7 @@ export default function Contact() {
               <label>Message</label>
               <textarea
                 name="message"
-                rows={3}
+                rows={1}
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
