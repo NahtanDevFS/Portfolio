@@ -3,12 +3,15 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import { toast } from "sonner";
+import { useLanguage } from "@/context/LanguageContext";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const api_key = process.env.NEXT_PUBLIC_EMAILJS_API_KEY;
   const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
   const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+
+  const { t } = useLanguage();
 
   const [formData, setFormData] = useState({
     fullname: "",
@@ -35,14 +38,14 @@ export default function Contact() {
       !formData.affair ||
       !formData.message
     ) {
-      alert("Please fill in all fields.");
+      alert(t.contact.fillAllFields);
       return;
     }
 
     emailjs
       .sendForm(serviceId, templateId, e.target as HTMLFormElement, api_key)
       .then(() => {
-        toast.success("Email sent");
+        toast.success(t.contact.success);
         setFormData({
           fullname: "",
           email: "",
@@ -53,22 +56,22 @@ export default function Contact() {
       })
       .catch((error) => {
         console.error("Error sending email:", error);
-        toast.error("Failed to send email. Please try again later.");
+        toast.error(t.contact.error);
       });
   };
 
   return (
     <div className="contact-container">
       <h1 className="logo">
-        Contact <span>Me</span>
+        {t.contact.title} <span>{t.contact.span}</span>
       </h1>
 
       <div className="contact-wrapper animated bounceInUp">
         <div className="contact-form">
-          <h3 className="contact-form-name">Contact Form</h3>
+          <h3 className="contact-form-name">{t.contact.formTitle}</h3>
           <form action="" onSubmit={sendEmail}>
             <p>
-              <label>Name</label>
+              <label>{t.contact.name}</label>
               <input
                 type="text"
                 name="fullname"
@@ -77,7 +80,7 @@ export default function Contact() {
               ></input>
             </p>
             <p>
-              <label>Email Adress</label>
+              <label>{t.contact.email}</label>
               <input
                 type="email"
                 name="email"
@@ -86,7 +89,7 @@ export default function Contact() {
               ></input>
             </p>
             <p>
-              <label>Phone Number</label>
+              <label>{t.contact.phone}</label>
               <input
                 type="tel"
                 name="phone"
@@ -95,7 +98,7 @@ export default function Contact() {
               ></input>
             </p>
             <p>
-              <label>Affair</label>
+              <label>{t.contact.affair}</label>
               <input
                 type="text"
                 name="affair"
@@ -104,7 +107,7 @@ export default function Contact() {
               ></input>
             </p>
             <p className="block">
-              <label>Message</label>
+              <label>{t.contact.message}</label>
               <textarea
                 name="message"
                 rows={1}
@@ -113,14 +116,12 @@ export default function Contact() {
               ></textarea>
             </p>
             <p className="block">
-              <button type="submit">Send</button>
+              <button type="submit">{t.contact.send}</button>
             </p>
           </form>
         </div>
         <div className="contact-info">
-          <h3 className="contact-info-name">
-            Or you can contact me at this E-mail:
-          </h3>
+          <h3 className="contact-info-name">{t.contact.or}</h3>
           <p>
             <strong>jonathan04franco@gmail.com</strong>
           </p>

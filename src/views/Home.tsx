@@ -1,14 +1,22 @@
-import React from 'react'
-import './Home.css'
+"use client";
+
+import React from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import "./Home.css";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
-    <div className='home-container'>
-        <div className='home-title'>
-            <h1>Hi, I&apos;m <span>Jonathan.</span></h1>
-            <br></br>
-            <div className='home-paragraph'>I&apos;m a System Engineering student and a full stack web developer in progress.</div>
-        </div>
+    <div className="home-container">
+      <div className="home-title">
+        <h1>
+          {t.home.greeting}
+          <span>{t.home.name}</span>
+        </h1>
+        <br></br>
+        <div className="home-paragraph">{t.home.role}</div>
+      </div>
     </div>
-  )
+  );
 }

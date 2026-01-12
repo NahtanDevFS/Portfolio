@@ -1,23 +1,20 @@
+"use client";
+
 import React from "react";
 import "./About.css";
+import { useLanguage } from "@/context/LanguageContext";
 import Skill_item from "@/components/Skill_item";
 
 export default function Content() {
+  const { t } = useLanguage();
+
   return (
     <div className="about-container">
-      <h1 className="about-title">About me</h1>
+      <h1 className="about-title">{t.about.title}</h1>
       <div className="about-content">
         <div className="about-info">
           <img src="image.jpg" alt="profile" className="about-image" />
-          <p className="about-description">
-            Hi, I&apos;m Jonathan and I&apos;m 20 years old. I&apos;m currently
-            studying a degree in Systems Engineering and Computer Science. I
-            like everything related to Web development, which is why apart from
-            university I learn technologies such as HTML, CSS, JavaScript,
-            TYPESCRIPT, SQL, GIT, GITHUB, PYTHON and frameworks such as REACT,
-            NEXT.JS and FASTAPI on my own. The language that I have used the
-            most is Typescript.
-          </p>
+          <p className="about-description">{t.about.description}</p>
         </div>
         <div className="about-skills">
           <div className="about-skill-row1">

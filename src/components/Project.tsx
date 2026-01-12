@@ -10,6 +10,8 @@ interface ProjectItemProps {
   href_project: string;
   href_repo: string;
   technologies: Technology[];
+  viewProjects: string;
+  viewRepo: string;
 }
 
 interface Technology {
@@ -24,6 +26,8 @@ const Project: React.FC<ProjectItemProps> = ({
   href_project,
   href_repo,
   technologies,
+  viewProjects,
+  viewRepo,
 }) => {
   const [currentImg, setCurrentImg] = useState(0);
 
@@ -71,13 +75,13 @@ const Project: React.FC<ProjectItemProps> = ({
               className="projects-button"
               onClick={() => handleButtonClick(href_project)}
             >
-              View project
+              {viewProjects}
             </button>
             <button
               className="projects-button"
               onClick={() => handleButtonClick(href_repo)}
             >
-              View code
+              {viewRepo}
             </button>
           </div>
         </div>

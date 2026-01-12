@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inconsolata } from "next/font/google";
+import { LanguageProvider } from "@/context/LanguageContext";
 import { Toaster } from "sonner";
 import "./globals.css";
 
@@ -33,8 +34,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inconsolata.variable}`}
       >
-        <Toaster position="bottom-right" richColors />
-        {children}
+        <LanguageProvider>
+          <Toaster position="bottom-right" richColors />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

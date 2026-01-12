@@ -1,49 +1,49 @@
 .home-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: auto; 
-    width: 100%; /* Full width */
-    color: #ffd60a;
-    margin-bottom: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  width: 100%; /* Full width */
+  color: #ffd60a;
+  margin-bottom: 25%;
 }
 
 .home-title {
-    font-size: 62px;
-    margin-top: 10%;
-    margin-left: 15%;
-    margin-right: 15%;
+  font-size: 55px;
+  margin-top: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .home-title span {
-    color: #c300ff;
-    font-size: 100px;
-    font-weight: 900;
+  color: #c300ff;
+  font-size: 110px;
+  font-weight: 900;
 }
 
 .home-paragraph {
-    font-size: 72px;
+  font-size: 72px;
 }
 
 @media (max-width: 700px) {
-    .home-container {
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
+  .home-container {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 
-    .home-title {
-        font-size: 30px;
-    }
+  .home-title {
+    font-size: 30px;
+  }
 
-    .home-title span {
-        color: #c300ff;
-        font-size: 50px;
-        font-weight: 900;
-    }
-    
-    .home-paragraph {
-        font-size: 28px;
-        width: auto;
-    }
+  .home-title span {
+    color: #c300ff;
+    font-size: 50px;
+    font-weight: 900;
+  }
+
+  .home-paragraph {
+    font-size: 28px;
+    width: auto;
+  }
 }
