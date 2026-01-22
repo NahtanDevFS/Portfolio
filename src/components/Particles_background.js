@@ -22,11 +22,6 @@ const ParticlesBackground = () => {
 
   const options = useMemo(
     () => ({
-      background: {
-        color: {
-          value: "#000814",
-        },
-      },
       fpsLimit: 120,
       interactivity: {
         events: {
@@ -83,7 +78,7 @@ const ParticlesBackground = () => {
       },
       detectRetina: true,
     }),
-    []
+    [],
   );
 
   return (

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inconsolata } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import { Toaster } from "sonner";
 import "./globals.css";
 
@@ -35,8 +36,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${inconsolata.variable}`}
       >
         <LanguageProvider>
-          <Toaster position="bottom-right" richColors />
-          {children}
+          <AnimatedBackground />
+          <div style={{ position: "relative", zIndex: 1 }}>
+            <Toaster position="bottom-right" richColors />
+            {children}
+          </div>
         </LanguageProvider>
       </body>
     </html>
